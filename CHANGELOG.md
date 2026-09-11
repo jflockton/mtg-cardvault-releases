@@ -4,6 +4,11 @@ All notable changes to MTG CardVault. Versions are the tagged releases on GitHub
 
 The format loosely follows [Keep a Changelog](https://keepachangelog.com/); this project uses simple `MAJOR.MINOR.PATCH` tags.
 
+## [0.19.2] — 2026-09-11
+
+### Changed
+- **A deck's missing cards go to a wish list as well as the buy list.** Two buttons on the deck's title row — **🛒 Add missing cards to buy list** and **☆ Add missing cards to wish list** — replace the one that sat at the bottom of the Missing singles panel. The wish-list one asks which list, or takes a name for a new one; each card goes on once, wanting as many copies as the deck is short, and cards already on the list are left alone and counted in the message.
+
 ## [0.19.1] — 2026-09-11
 
 ### Added
