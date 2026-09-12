@@ -4,6 +4,16 @@ All notable changes to MTG CardVault. Versions are the tagged releases on GitHub
 
 The format loosely follows [Keep a Changelog](https://keepachangelog.com/); this project uses simple `MAJOR.MINOR.PATCH` tags.
 
+## [0.19.3] — 2026-09-12
+
+### Fixed
+- **Cardmarket readings are kept.** Every reading off a card's Cardmarket page had been failing to save — "could not be kept — the app's log says why" on every card — because an inventory from before the reading learned about pounds still had the table's old columns, and the app never brought it up to date. It does now, on launch, and the reading stays on the card.
+
+### Changed
+- **💷 Get Cardmarket price, on every card view.** The button that used to say "Cardmarket page" says what it does: open this printing's Cardmarket page once, inside the app, read the cheapest UK offer and the price guide off it, and keep them on the card. The moment the figures are read the page goes away and the popup shrinks to the price — **from £x**, with trend, 7-day and 30-day under it — and a Close button; Esc closes it too. When Cardmarket won't serve the page the popup says so in a sentence, without an error, and leaves the page up so a "verify you are human" tick can be answered.
+- **The inventory browser's card view has the button too**, and the same two price lines as everywhere else.
+- **Two price lines on every card view, both in £.** *scryfall* — Cardmarket's trend as the card data recorded it, dated, with the app's own 7-day and 30-day averages and the foil figure — and *cm* — the last reading off the card's own page: from, 7-day, 30-day, trend, copies on sale, and when it was read. Euro figures are in the tooltip. Wish list, buy list, deck, set collector and the inventory browser show them in the same order: type and set, inventory and buy-list status, the two price lines, then the quantity row and the buttons.
+
 ## [0.19.2] — 2026-09-11
 
 ### Changed
