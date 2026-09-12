@@ -4,6 +4,15 @@ All notable changes to MTG CardVault. Versions are the tagged releases on GitHub
 
 The format loosely follows [Keep a Changelog](https://keepachangelog.com/); this project uses simple `MAJOR.MINOR.PATCH` tags.
 
+## [0.19.4] — 2026-09-12
+
+### Changed
+- **The "Add to a wish list" / "Add to another deck" picker sits indented under its button**, edged in the theme's accent, and the row after it is back in line with the rest.
+- **The two price pills read as two sources.** The pill says **CARDMARKET** rather than "cm", in blue in every look, with "from" in plain text and the figure in the same blue; the **SCRYFALL** pill is green in every look. In the ordinary looks the two used to share the palette's green.
+
+### Fixed
+- **"From £16.70" was read as £1670.** The cheapest offer on a Cardmarket page comes as "£16.70" while the guide comes as "15,96 £", and the reader treated every dot as a thousands mark. The last separator is now the decimal point when one or two digits follow it, whichever character it is. Press 💷 Get Cardmarket price again on a card that shows a silly figure and the reading is replaced.
+
 ## [0.19.3] — 2026-09-12
 
 ### Fixed
