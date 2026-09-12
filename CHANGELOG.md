@@ -4,6 +4,21 @@ All notable changes to MTG CardVault. Versions are the tagged releases on GitHub
 
 The format loosely follows [Keep a Changelog](https://keepachangelog.com/); this project uses simple `MAJOR.MINOR.PATCH` tags.
 
+## [0.20.0] — 2026-09-12
+
+### Changed
+- **New CARDVAULT wordmarks for the 8-bit and 16-bit styles** — a blue-and-gold pixel one and a carved, weathered one — in place of the placeholder the two had been sharing.
+- **A deck card whose buy-list copies are all ordered says 📦 Ordered**, in the accent, instead of 🛒 In buylist — on the stacked card and in its card view. While any copy is still to buy it stays In buylist, with the ordered count in the tooltip.
+- **A List card's price is read from its original printing's Cardmarket page.** A card from The List has no Cardmarket product of its own on Scryfall, so 💷 Get Cardmarket price used to land on a name search and read nothing; now it opens the original printing's page — Surrak and Goreclaw (PLST) reads March of the Machine: Extras #337 — and the popup says so. And when the app does have to fall back to a name search, clicking the printing you mean on the page now reads its price, with the UK-sellers filter put on first.
+- **A wish list's Send all to buy list, Copy list and Export leave out the cards already on order.** A card on its way would only be bought twice; the message after Send all says how many were left out for that reason.
+- **"Hide ordered" on the buy list's title row.** A tick box that takes the "Ordered, on the way" section and its tiles off the page, so the list is what's still to order; the count in brackets says how many lines are hidden. Remembered across launches. The **📦 All ordered** button is gone — one stray click marked every line ordered, and undoing that meant unmarking them one by one. Lines are still marked ordered one at a time, and **📬 All arrived** stays.
+- **The buy list's paid-against-market figure is green when you paid under the 7-day average**, red when over, in every look. In the high-contrast look the gain used to draw in that look's blue.
+
+### Added
+- **📥 Paste order, on the buy list.** Copy the order confirmation off Cardmarket's page (or another shop's) and paste it in: the app reads each line — `1x`, the name, `#225`, the condition, the price — shows them back so a bad paste is seen first, asks which shop, and marks every line ordered with what you paid per copy. A card that isn't on the list is added as that printing and marked in the same go; a printing already ordered is left alone; a name it can't find is named in the message. A euro price is turned into pounds at the day's rate.
+- **A name and a collector number narrows the printings** when adding a card by hand, on the buy list and in the deck builder — `evolving wilds 153` shows that one, `evolving wilds 15` the handful whose number starts 15, the exact number first. `#153` works too. The `(FIN) 123` and `fin 123` forms are unchanged.
+- **"📦 Ordered 10 Sept" under a wish-list card's name** once its buy-list line has been marked ordered — the small badge over the art was easy to miss. The shop is in the tooltip; a different printing on order says so with a dashed pill.
+
 ## [0.19.4] — 2026-09-12
 
 ### Changed
