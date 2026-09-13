@@ -4,6 +4,11 @@ All notable changes to MTG CardVault. Versions are the tagged releases on GitHub
 
 The format loosely follows [Keep a Changelog](https://keepachangelog.com/); this project uses simple `MAJOR.MINOR.PATCH` tags.
 
+## [0.20.1] — 2026-09-13
+
+### Changed
+- **The 16-bit CARDVAULT wordmark is blue-and-gold fantasy lettering** in place of the carved, weathered one that shipped in 0.20.0.
+
 ## [0.20.0] — 2026-09-12
 
 ### Changed
