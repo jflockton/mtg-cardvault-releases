@@ -4,6 +4,11 @@ All notable changes to MTG CardVault. Versions are the tagged releases on GitHub
 
 The format loosely follows [Keep a Changelog](https://keepachangelog.com/); this project uses simple `MAJOR.MINOR.PATCH` tags.
 
+## [0.23.1] — 2026-09-14
+
+### Changed
+- **The two biggest pages are split by feature** (nothing changes on screen). DeckBuilding.tsx (3,241 lines) is now the deck index alone (440); one open deck is `deck/DeckDetailView.tsx`, with its version history, card-swap table and feeding wish lists each in their own file beside it. WishLists.tsx (2,740) is now the wish lists page alone (856); the To buy list is its own component, `wishlists/BuyList.tsx`, and the card view, the hand-add search, the paste and shop modals and the shared helpers live beside it. The smoke run checks the buy page's add-a-card modal and price watch as well, and that the self-update bar sits above the launcher without squashing its tiles (what 0.22.0 got wrong).
+
 ## [0.23.0] — 2026-09-14
 
 ### Added
