@@ -4,6 +4,21 @@ All notable changes to MTG CardVault. Versions are the tagged releases on GitHub
 
 The format loosely follows [Keep a Changelog](https://keepachangelog.com/); this project uses simple `MAJOR.MINOR.PATCH` tags.
 
+## [0.23.0] — 2026-09-14
+
+### Added
+- **The tag build starts the app it just built before packaging it.** `npm run smoke` (tests/smoke/smoke.ts) drives Electron with Playwright against a scratch inventory seeded from the reference DB and walks every page — the inventory browser and a ± round-trip, the Collection count, a deck, the wish and buy lists, the set collector. It runs on the Windows runner between `npm run build` and the installer, so a bundle that will not launch (0.21.0) fails the release instead of the user.
+
+### Changed
+- **Every internal call is on the typed contract** (nothing changes on screen). 0.22.0 introduced `src/shared/ipc.ts` for eight channels; the other 144 are there now, generated from the preload's own signatures, and every page calls `window.api.invoke('deck:rename', …)` instead of a hand-written method. The preload is down from 781 lines to the events main pushes plus that one door, and `handle()` in main refuses a channel the contract does not know — so the two ends cannot drift.
+- **The stock ledger is brought level with the stock, and checked at every start.** The ledger 0.22.0 seeded from the scan log inherited the scan log's gaps — sales, undos and finish moves from before it existed only ever changed the stock — so on eight stacks it disagreed with what is held. A migration writes one correcting `reconcile` entry per stack (the stock is not touched), and from now on the app checks the two agree when it opens: if they ever drift again — an older build sharing the Dropbox file would do it — a warning names the stacks, and Settings → Inventory storage shows them with a **Reconcile ledger** button. A conflicted copy's reconcile entries are its own baseline and are never replayed by the merge.
+- **Pages no longer ask for their own reloads.** The 75 `loadDecks()` / `loadLists()` / `loadInventory()` calls that followed every write are gone, along with the reload callbacks threaded through the deck page and the older `inv:changed` event: every write announces what it touched and the pages refetch from that. Two writes that reached across families now announce it too — an arrival on the buy list puts copies into stock, and a Cardmarket price read off the panel changes the buy list — so the Collection page and the buy list follow them as well.
+- CI runs on Node 24, the Node that Electron 43 embeds, so the tests exercise the same `node:sqlite` build the shipped app uses (they ran on Node 26).
+- The deck card's flip and print buttons sit under the art, as they do in the inventory viewer.
+
+### Fixed
+- The self-update bar keeps its height above the launcher instead of squashing the tiles.
+
 ## [0.22.0] — 2026-09-14
 
 ### Added
