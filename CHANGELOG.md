@@ -4,6 +4,14 @@ All notable changes to MTG CardVault. Versions are the tagged releases on GitHub
 
 The format loosely follows [Keep a Changelog](https://keepachangelog.com/); this project uses simple `MAJOR.MINOR.PATCH` tags.
 
+## [0.23.2] — 2026-09-14
+
+### Changed
+- **Visual Stacks fills the width.** The stacks used to be laid out by the browser's newspaper columns, which settle on the height of the tallest stack and then fill the columns one after another to it — so with one long section (36 creatures) a wide window got four columns of stacks and a black quarter-page beside them. The app packs the stacks itself now: each section goes, in order, into the column that is shortest so far, so every column the window is wide gets used. Split is unchanged, since there a long stack may break to level the columns.
+
+### Fixed
+- **The card view fits the window.** In the deck builder and the inventory browser the card art was always 540px wide, so in a short window — or with View → Zoom turned up, which the app remembers between launches — the card ran past the bottom of its panel and the rest was behind a scrollbar. The art now shrinks to whatever height the window leaves it, keeping its proportions, so the whole card is always in view.
+
 ## [0.23.1] — 2026-09-14
 
 ### Changed
