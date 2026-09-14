@@ -4,6 +4,11 @@ All notable changes to MTG CardVault. Versions are the tagged releases on GitHub
 
 The format loosely follows [Keep a Changelog](https://keepachangelog.com/); this project uses simple `MAJOR.MINOR.PATCH` tags.
 
+## [0.21.1] — 2026-09-14
+
+### Fixed
+- **0.21.0's installer crashed on start** with "Named export 'autoUpdater' not found": the self-updater is a CommonJS package and the app's main bundle is ESM, so Node refused the named import before a window existed. The default import carries the same object, and the app now uses that. Anyone who installed 0.21.0 needs to install this one by hand once; from here the updater does it.
+
 ## [0.21.0] — 2026-09-14
 
 ### Changed
