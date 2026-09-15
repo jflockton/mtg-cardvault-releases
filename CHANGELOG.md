@@ -4,6 +4,13 @@ All notable changes to MTG CardVault. Versions are the tagged releases on GitHub
 
 The format loosely follows [Keep a Changelog](https://keepachangelog.com/); this project uses simple `MAJOR.MINOR.PATCH` tags.
 
+## [1.0.0] — 2026-09-15
+
+The first full release. Every 0.x release before it has been taken down; an installed 0.x copy updates to this one as usual.
+
+### Added
+- **Licence keys.** Without a key the app runs as the **free version**: 100 cards in stock, 100 cards across the deck builder, one wish list, 25 cards on the buy list, and no price watch, price-history import, set collector, precon import or AI deck guides. Nothing over a limit is ever removed — a stock scanned past it stays exactly as it is — only adding past it is refused, and the refusal is shown as a prompt with the way to a key. A key is entered once, in **Settings → Licence**, which shows who it was issued to, each limit and how full it is, and takes the key back out again; the same key works on every till in the shop. Keys are signed and checked on the machine itself — nothing is sent anywhere, and the app works offline as before. Locked sections carry a lock on their launcher tile and open to a page that says what they are and how to have them.
+
 ## [0.24.0] — 2026-09-15
 
 ### Added
