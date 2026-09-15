@@ -4,6 +4,11 @@ All notable changes to MTG CardVault. Versions are the tagged releases on GitHub
 
 The format loosely follows [Keep a Changelog](https://keepachangelog.com/); this project uses simple `MAJOR.MINOR.PATCH` tags.
 
+## [1.0.1] — 2026-09-15
+
+### Fixed
+- **Set symbols show on the dark themes.** In the deck builder's text list and on the set collector's tiles, about a quarter of the set symbols — the newer sets, whose Scryfall artwork carries a black fill of its own — drew black on the dark background and could not be seen. Every symbol is now drawn in the theme's accent colour, on every theme.
+
 ## [1.0.0] — 2026-09-15
 
 The first full release. Every 0.x release before it has been taken down; an installed 0.x copy updates to this one as usual.
