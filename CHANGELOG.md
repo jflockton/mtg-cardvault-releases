@@ -4,6 +4,12 @@ All notable changes to MTG CardVault. Versions are the tagged releases on GitHub
 
 The format loosely follows [Keep a Changelog](https://keepachangelog.com/); this project uses simple `MAJOR.MINOR.PATCH` tags.
 
+## [0.24.0] — 2026-09-15
+
+### Added
+- **Compare two decks — or a deck against a list or a link.** On the deck builder's front page, **⇄ Compare** makes the decks tickable: tick two and press **Compare ticked**, or tick one and compare it **with a pasted list** or **with a link** (Archidekt, Moxfield or EDHREC — nothing is imported, the other side is read for the answer and forgotten). The result is three columns — *Only in A*, *Only in B*, and *In both*, the shared cards run in different numbers first — compared by card name on the main board plus commander, so a Moxfield list's printings never count as differences. Every card on the other side carries what the shelf says: **not owned**, **own it, free**, or **in other decks** (basics always count as free). Every row opens the card, large, with each side's count. Each column's heading totals its cards — price × copies — with each line priced the way the buy list prices it: a reading off the card's own Cardmarket page within the fortnight first, else a 7-day average of the history on file, else Scryfall's trend; lines priced off a Cardmarket page are marked green, and the tooltip says what each price is. **☆ Wish list the difference** sends everything B has that A doesn't onto an existing or new wish list, with quantities, leaving out copies you already own that A isn't using (tick **include owned** to send everything); names no card data matched are listed with a `?` and left out. **Swap sides** looks at it the other way round without re-fetching. The comparison is its own page in the route, so ← Back returns to the deck index.
+- **The deck index as a list.** A **Tiles / List** switch beside the Decks heading (remembered between runs). The list is one line per deck — pin, name and id, format, card count, colour identity as the real mana symbols, and the stock badges — sorted *Pinned, then recent*, *A–Z*, or *Grouped by colour*: fewer colours first, then the groups A–Z by name, each headed by its symbols and the game's name for it (*Mono · Black*, *Dimir · Blue / Black*, *Grixis · Blue / Black / Red*), colourless and no-commander decks in groups of their own. A pinned deck sits at the top of its group, and of the A–Z list.
+
 ## [0.23.2] — 2026-09-14
 
 ### Changed
