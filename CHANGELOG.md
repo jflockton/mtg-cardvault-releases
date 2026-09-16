@@ -4,6 +4,15 @@ All notable changes to MTG CardVault. Versions are the tagged releases on GitHub
 
 The format loosely follows [Keep a Changelog](https://keepachangelog.com/); this project uses simple `MAJOR.MINOR.PATCH` tags.
 
+## [1.0.2] — 2026-09-16
+
+### Changed
+- **Card views open with labelled facts.** The one grey line under a card's name — set, number, rarity and type run together with dots — is now three, each led by a label in the accent colour: **Card info** (set, code and collector number), **Rarity** and **Card type**, with the values in title case. The same three lines in the inventory browser, the deck builder, the wish lists and the set collector; the deck builder's view now shows the set name and rarity too.
+- **Print A4 sits under the card.** The 🖨️ Print A4 button has left the action rows and is a small chip centred under the card art, beside the flip button, in every card view — inventory, deck builder (cards and tokens), wish lists and set collector.
+
+### Fixed
+- **Get Cardmarket price on a card nobody is selling.** A Cardmarket page with no offers used to keep the panel busy for half a minute and then say "No price on this page", keeping nothing — the card still read *not read yet* and the button looked worth pressing again. The page is recognised at once now and kept as a reading with nothing on sale in it: the panel says **No copies on sale**, with the price guide beneath when the page has one, and the card's Cardmarket line reads *no copies on sale · read …* so you can see it has been checked. The buy list shows the same.
+
 ## [1.0.1] — 2026-09-15
 
 ### Fixed
