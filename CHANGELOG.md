@@ -4,6 +4,11 @@ All notable changes to MTG CardVault. Versions are the tagged releases on GitHub
 
 The format loosely follows [Keep a Changelog](https://keepachangelog.com/); this project uses simple `MAJOR.MINOR.PATCH` tags.
 
+## [1.0.5] — 2026-09-16
+
+### Fixed
+- **"A JavaScript error occurred in the main process" on ★ cards.** Scryfall's image server names a card whose collector number carries a ★ — the alt-art promos — with that character raw in a response header, which the new art cache's fetch could not stomach: the box appeared whenever such a card was drawn, or when *Keep the art of my cards* reached one. Images are fetched a different way now and the ★ cards load like any other.
+
 ## [1.0.4] — 2026-09-16
 
 ### Added
