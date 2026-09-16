@@ -4,6 +4,18 @@ All notable changes to MTG CardVault. Versions are the tagged releases on GitHub
 
 The format loosely follows [Keep a Changelog](https://keepachangelog.com/); this project uses simple `MAJOR.MINOR.PATCH` tags.
 
+## [1.0.3] — 2026-09-16
+
+### Added
+- **Where a card is.** The inventory card view has a **DECKS** block under the price lines: the deck your copy is sleeved in leads, ticked in green; beneath it, under **NEEDS A COPY**, the built decks that list the card and did not get one (with **+N** for how many more each needs); and under **ON PAPER**, lists you haven't built and sideboards. Every deck name opens the deck. A card no deck lists says *none*.
+- **Typing a set code selects the set.** In the inventory's *Filter sets* box a full code — FIN, MH3 — selects that set outright instead of only narrowing the dropdown. A partial code still narrows; a set selected by typing lets go when the text stops being its code, while one picked from the dropdown by hand stays put.
+
+### Changed
+- **Lists price a card by its Cardmarket cheapest offer.** A card whose Cardmarket page had been read was priced on the wish lists, the buy list, the deck builder and the compare view at the page's 7-day average — while the card view led with *from £19.43*. The cheapest offer is what a copy costs, so it is the price now; the page's 7-day average, then trend, stand in only when the page had nothing on sale or the offer was in pounds before the day's exchange rate had arrived. The buy list's header split is *market* vs *trend* rather than *7-day average* vs *trend*, since an offer is a market price too.
+
+### Fixed
+- **Inventory colour filter chips.** The colour blob sat left of centre in its square on the pixel looks; each chip is now a fixed square with the glyph centred.
+
 ## [1.0.2] — 2026-09-16
 
 ### Changed
