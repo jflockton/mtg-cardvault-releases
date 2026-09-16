@@ -4,6 +4,19 @@ All notable changes to MTG CardVault. Versions are the tagged releases on GitHub
 
 The format loosely follows [Keep a Changelog](https://keepachangelog.com/); this project uses simple `MAJOR.MINOR.PATCH` tags.
 
+## [1.0.4] — 2026-09-16
+
+### Added
+- **Card art kept on this machine.** Every card picture used to be fetched from Scryfall each time it was shown. **Settings → Card art** now keeps copies in the app's own data folder (never the inventory folder), and a copy on disk is always drawn instead of being fetched again — so the pages are instant and still work with no connection, where another size of the same card stands in for one that isn't on disk. Three options: **Keep images as I view them** (on by default; anything nothing has looked at for two days is removed), **Keep the art of my cards** (a background job over every printing in stock, in a deck, on a wish list or the buy list — about 200 MB for a couple of thousand cards — with a bar at the top of the window when it finishes, topped up at each launch), and **Keep the art of every card** (the whole database, roughly 9 GB, fetched slowly over several hours and resumed at each launch). **Delete cache** removes the lot and switches the two keep options off.
+
+### Changed
+- **Deck and wish-list tiles drop the #id**, and the format badge reads **👑 Commander** rather than "commander".
+- **Inventory card view:** the nonfoil and foil counters share one line; the **DECKS** block is a small table — the deck that holds your copy ticked on the first row, then **NEEDS A COPY** (with **+N**) and **ON PAPER** rows, one deck per line, pill labels ranged right.
+
+### Fixed
+- **Deleting a deck while its page was open** logged "FOREIGN KEY constraint failed" as the page closed its sitting; the sitting is dropped with the deck, and a sitting whose deck has gone ends quietly.
+- The dev hook that re-runs `npm install` no longer trips Node 24's DEP0190 warning.
+
 ## [1.0.3] — 2026-09-16
 
 ### Added
