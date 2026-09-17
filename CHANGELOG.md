@@ -4,6 +4,16 @@ All notable changes to MTG CardVault. Versions are the tagged releases on GitHub
 
 The format loosely follows [Keep a Changelog](https://keepachangelog.com/); this project uses simple `MAJOR.MINOR.PATCH` tags.
 
+## [1.1.0] — 2026-09-17
+
+### Added
+- **Price alerts.** The price watch, said out loud: when the app opens — and again whenever the price series gains a day or a wish list changes — every wish-list card that has fallen under its own average by a margin you set is announced in a message at the top of the window, one card at a time, each for a few seconds, then it fades. **Settings → Price alerts** holds the rule: *at least N% under its D-day average* (20% / 30 days), *only cards normally worth at least £X* (£1, so a basic land halving from twenty cents is not news), and how long each message stays (5 s). Clicking a message opens the price watch. Each card is announced once per run per priced day. The reading is the same one the price watch makes, so the two never disagree; and like the price watch it is part of the full version.
+- **Tokens go on wish lists.** A token opened in the deck builder now has **☆ Add to wish list** — the same picker as a deck card, and the same "already on that list" answer when it is — and **📋 Copy card details** (`Angel (TDSC) 2`). The inventory's card view and the wish-list card view had both already.
+- **Group by Role.** View options on every deck and wish list have a new grouping beside Type: the Command Zone template's piles — **Ramp**, **Card Advantage**, **Targeted Disruption**, **Mass Disruption**, **Lands** and **Plan Cards** — each with its count in the heading, in that order. A card's pile is read off its rules text (a mana rock adds mana, a wipe destroys all, a counterspell counters target…); a card that does two things goes where the template would count it first, so a removal spell that also draws is removal, and a blink that exiles your own creature and hands it straight back is a plan card, not removal. Lands are lands whatever they say. A card the database has no rules text for shows as *Unresolved* until the next *Refresh card data*.
+
+### Changed
+- **The "Card art downloaded" bar** no longer waits for an OK — it fades out after ten seconds, and any price alerts go first. The message box is drawn in the theme's accent.
+
 ## [1.0.5] — 2026-09-16
 
 ### Fixed
