@@ -4,6 +4,27 @@ All notable changes to MTG CardVault. Versions are the tagged releases on GitHub
 
 The format loosely follows [Keep a Changelog](https://keepachangelog.com/); this project uses simple `MAJOR.MINOR.PATCH` tags.
 
+## [1.2.0] — 2026-09-23
+
+### Added
+- **Infinite combos on the deck page.** A band under the cards shows every infinite combo the deck holds — two-card lines, lines that also need a generic piece, and longer ones — each as small cards with its steps, the mana it needs and its prerequisites (mana symbols drawn as symbols). Beneath them, the two-card combos the deck is **one card away** from, in its colours. Commander-only lines appear only when that commander leads the deck. The combo data is [Commander Spellbook](https://commanderspellbook.com)'s — about 109,000 lines, downloaded with **Refresh card data** (~28 MB); refresh once after updating to fetch it. If their site is down the card data still refreshes and the page says the combos are missing.
+- **Commander bracket.** A badge in the deck's title row — the loudest thing there, in the theme's accent — and a band above the combos give the lowest bracket the deck can honestly be called, and why: game changers, two-card infinite combos (and how much mana they need), mass land denial, extra turns and tutors. Click the badge to jump to the reasons; each opens to its cards.
+- **Basic vs non-basic lands.** Every land count now says how many are basics: the Lands heading on decks and wish lists (by Type or by Role), the colour breakdown's "spells · lands" line, and the Lands row of the opening-hand odds.
+- **Credits.** Help → About credits Commander Spellbook and Scryfall, and the Help menu links to both sites. The Card data page links to Commander Spellbook.
+
+### Changed
+- **Headings in colour.** Grouped by Rarity, section headings take the colour of the rarity's expansion symbol, on every deck and wish list. Grouped by Role, each pile has a colour of its own.
+- **The Built / List only button is gone** from the deck toolbar. Every deck is a built deck.
+- Grouped by Role, the *Unresolved* pile says when it is only there because the card data has no rules text yet, and the Card data page says a refresh fills it.
+
+### Fixed
+- **Hiding the side columns on a deck page** no longer leaves a long blank space under the cards when the missing-singles list is long.
+
+## [1.1.1] — 2026-09-17
+
+### Changed
+- **"Card art downloaded"** is a toast at the foot of the window now, not a bar across the top, and it goes on its own after five seconds.
+
 ## [1.1.0] — 2026-09-17
 
 ### Added
