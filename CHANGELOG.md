@@ -4,6 +4,11 @@ All notable changes to MTG CardVault. Versions are the tagged releases on GitHub
 
 The format loosely follows [Keep a Changelog](https://keepachangelog.com/); this project uses simple `MAJOR.MINOR.PATCH` tags.
 
+## [1.2.1] — 2026-09-23
+
+### Changed
+- **A new app icon** — the CV emblem on a filled tile rather than a disc on transparency. macOS composites every app onto the same rounded square, so the disc arrived as a sticker with the desktop showing through its corners: dark in the Dock and in a dark-mode Finder, which read as a black border round the art. The tile is the emblem's own orange carried out to the edges, full bleed, and the Windows `.exe` and the running window wear the same one — at every size Windows asks for, including the 20px and 40px it draws at 125% and 250% display scaling.
+
 ## [1.2.0] — 2026-09-23
 
 ### Added
