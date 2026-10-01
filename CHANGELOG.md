@@ -4,6 +4,28 @@ All notable changes to MTG CardVault. Versions are the tagged releases on GitHub
 
 The format loosely follows [Keep a Changelog](https://keepachangelog.com/); this project uses simple `MAJOR.MINOR.PATCH` tags.
 
+## [1.4.0] — 2026-10-01
+
+### Added
+- **Build from my collection.** A third way into Build Me a Deck, beside the colour tiles and the name box. Say what you would spend, then either let the app find a commander or name one. *Find one for me* builds the commanders you own from your own cards — the best-suited 48 first, four at a time in the background, behind a loading screen — and ranks them by how much of each deck you already hold: "27 of its 63 spells yours · £99.99 to finish". It checks commanders you do not own too, and suggests one only when its deck would use clearly more of your collection, with its price. *Search for one* takes you to that commander's plans, each saying how many of your cards serve it, the one your shelf is furthest towards first. Cards you own count as free wherever they are sleeved, so the budget is what you would spend on the rest. The finished deck shows the spells you own, what is left to buy, priced, and a ✓ on every card and land you hold.
+- **A running total while scanning.** The top of the scan page's session list shows what this session's cards are worth, in the theme's accent, counting up as each card lands with its value flashing beside it, and the cards, foils and any without a price under it. Foil copies count at the foil price; the −/+, foil tick, Remove and Clear all move it.
+- **Print a wish list or a deck.** A Print button on both makes an A4 sheet sorted by rarity, then colour, then mana cost: a tick box, quantity, name, mana cost and price per line, in two columns with a rule naming each colour and a line down the middle that stops where the cards do. A price read off the card's own Cardmarket page carries a boxed **CM**. Cards already in stock or on order are struck through. Print to PDF from the same dialog.
+- **Tick boxes on every wish.** Tick cards on a wish list without first pressing Select — handy for a card bought over a counter — and remove, move or send them to the buy list together.
+- **Sideboards travel.** Importing from Moxfield or Archidekt, or pasting a Moxfield export, brings the sideboard to the deck's sideboard — Archidekt's used to land in the deck itself, and a pasted Moxfield list's commanders, which come after its sideboard, are recognised as commanders. Export writes the sideboard last under `SIDEBOARD:`.
+
+### Changed
+- **Spellslinger decks cast more spells.** A deck whose plan counts spell casts now aims for 33 instants and sorceries, where it used to fill with creatures waiting for spells it never bought — a Stella Lee build went from 8 to the high twenties. It does not always reach 33 yet.
+- **The scan page dresses in its theme's accent** — panel edges, headings, the lines between rows, the frame round the card just scanned — to match the running total.
+- **Mark a buy-list card Arrived and it comes off the wish list that asked for it**, by as many copies as came; another list wanting it for another deck keeps it.
+- **Builds are about ten times faster** — a two-colour commander in about a second, not thirteen — and run on their own thread, so the app no longer freezes while a deck is built.
+- Text and Condensed views flow sections down the columns and on into the next, so a short section no longer leaves a column-high gap under it.
+- Build Me a Deck's first page puts the colour tiles at the top, a little smaller, with the name box under them.
+- Exported decklists no longer include tokens; the deck builder's Tokens column keeps them for buying.
+- Commander rules text in Build Me a Deck draws {T}, {U} and the rest as mana symbols.
+
+### Fixed
+- **The flip button sits under the card** on every card view. On wish lists it had wandered into the action column and stopped naming the face it turns to; Price Watch's card view had none.
+
 ## [1.3.0] — 2026-09-29
 
 ### Changed
