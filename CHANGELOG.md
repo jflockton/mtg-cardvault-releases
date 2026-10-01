@@ -4,6 +4,14 @@ All notable changes to MTG CardVault. Versions are the tagged releases on GitHub
 
 The format loosely follows [Keep a Changelog](https://keepachangelog.com/); this project uses simple `MAJOR.MINOR.PATCH` tags.
 
+## [1.4.1] — 2026-10-01
+
+### Added
+- **Save hard scans.** A tick box on the scan bar, off by default. While it is on, the frames the scanner could not read — a card in a sleeve, glare on the corner — are kept, and when the card is then added they are saved with it as the right answer, together with the frame that finally read. One folder per card, on this computer only (never synced); "N saved · open folder" opens it. They are a test set: every change to the scanner can be measured on the same real failures.
+
+### Changed
+- **The scanner asks the camera for 4K** (3840×2160) where it asked for 1080p, so the small collector line under a sleeve's haze has twice the pixels. The text reaches the OCR at the same size as before, just sharper. A camera that cannot do 4K gives its best instead.
+
 ## [1.4.0] — 2026-10-01
 
 ### Added
